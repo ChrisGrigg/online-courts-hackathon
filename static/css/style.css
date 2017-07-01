@@ -13622,6 +13622,9 @@ base-chart.chart {
   .sidebar .sidebar-nav .nav .nav-title span:after {
     right: -30px; }
 
+[type="checkbox"], [type="radio"] {
+  margin-right: 0.3rem; }
+
 .email-app {
   display: flex;
   flex: 1;

@@ -6,6 +6,7 @@ import Full from 'containers/Full'
 
 // Views
 import Claim from 'views/Claim'
+import Outcome from 'views/Outcome'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
           path: 'claim',
           name: 'Claim',
           component: Claim
+        },
+        {
+          path: 'outcome',
+          name: 'Outcome',
+          component: Outcome
         }
 
       ]
