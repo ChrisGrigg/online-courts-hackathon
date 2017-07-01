@@ -4,6 +4,8 @@
     <br />
     <h5>Case Number: 566778</h5>
     <br />
+    <h5>John Doe vs Fred Smith</h5>
+    <br />
     <div class="animated fadeIn">
       <div class="card">
         <div class="card-header lead"><i class="icon-note"></i> Outcome</div>

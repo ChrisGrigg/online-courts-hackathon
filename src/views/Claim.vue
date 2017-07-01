@@ -4,11 +4,7 @@
     <br />
     <h5>Case Number: 566778</h5>
     <br />
-    <div class="row">
-      <h5 class="col-md-4 text-center">John Doe</h5>
-      <h5 class="col-md-4 text-center">vs</h5>
-      <h5 class="col-md-4 text-center">Fred Smith</h5>
-    </div>
+    <h5>John Doe vs Fred Smith</h5>
     <br />
     <div class="animated fadeIn">
       <div class="card">
@@ -50,7 +46,20 @@
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-md-4 form-control-label">Did the defendant claim specialist expertise?</label>
+            <label class="col-md-4 form-control-label">Did you feel the Solicitor was slow in responding to correspondence?</label>
+            <div class="col-md-8">
+              <form id="claimantExpertiseForm">
+                <label class="radio-inline">
+                  <input type="radio" id="claimantExpertiseYes" name="claimantExpertise" value="Yes" checked="checked">Yes
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" id="claimantExpertiseNo" name="claimantExpertise" value="No">No
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label">Are there other matters on which you may need to instruct them?</label>
             <div class="col-md-8">
               <form id="claimantExpertiseForm">
                 <label class="radio-inline">
