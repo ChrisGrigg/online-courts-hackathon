@@ -1,29 +1,4 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.pid
-*.swp
-
-pids
-logs
-results
-
-#Build
-public/css/main.css
-
-# API keys and secrets
-.env
-
-# Dependency directory
-node_modules
-bower_components
-
-# Editors
+node_modules/*
 .idea
-*.iml
-
-# OS metadata
-.DS_Store
-Thumbs.db
+dist/
+static/css/style.min.css
