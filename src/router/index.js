@@ -7,6 +7,7 @@ import Full from 'containers/Full'
 // Views
 import Claim from 'views/Claim'
 import Outcome from 'views/Outcome'
+import Options from 'views/Options'
 
 Vue.use(Router)
 
@@ -30,8 +31,12 @@ export default new Router({
           path: 'outcome',
           name: 'Outcome',
           component: Outcome
+        },
+        {
+          path: 'options',
+          name: 'Options',
+          component: Options
         }
-
       ]
     }
   ]

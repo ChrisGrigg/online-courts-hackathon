@@ -4,12 +4,6 @@
     <br />
     <h5>Case Number: 566778</h5>
     <br />
-    <div class="row">
-      <h5 class="col-md-4 text-center">John Doe</h5>
-      <h5 class="col-md-4 text-center">vs</h5>
-      <h5 class="col-md-4 text-center">Fred Smith</h5>
-    </div>
-    <br />
     <div class="animated fadeIn">
       <div class="card">
         <div class="card-header lead"><i class="icon-note"></i> Outcome</div>
@@ -27,8 +21,11 @@
           </ul>
         </div>
         <div class="card-footer">
-          <router-link :to="'/outcome'" class="nav-link">
-            <button id="submitBtn" class="btn btn-sm btn-primary" type="submit">Next <i class="icon-arrow-right"></i></button>
+          <router-link :to="'/claim'" class="nav-link d-inline">
+            <button class="btn btn-sm btn-primary" type="submit"><i class="fa icon-arrow-left"></i> Back</button>
+          </router-link>
+          <router-link :to="'/options'" class="nav-link d-inline">
+            <button class="btn btn-sm btn-primary" type="submit">Next <i class="icon-arrow-right"></i></button>
           </router-link>
         </div>
       </div>
