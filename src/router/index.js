@@ -5,7 +5,7 @@ import Router from 'vue-router'
 import Full from 'containers/Full'
 
 // Views
-import Dashboard from 'views/Dashboard'
+import Claim from 'views/Claim'
 
 Vue.use(Router)
 
@@ -16,14 +16,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/dashboard',
+      redirect: '/claim',
       name: 'Home',
       component: Full,
       children: [
         {
-          path: 'dashboard',
-          name: 'Dashboard',
-          component: Dashboard
+          path: 'claim',
+          name: 'Claim',
+          component: Claim
         }
 
       ]

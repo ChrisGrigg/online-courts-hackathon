@@ -8,13 +8,15 @@ header.navbar {
 
 
   .navbar-brand {
+    color: white;
+    text-align: center;
     display: inline-block;
     width: $navbar-brand-width;
     height: $navbar-height;
     padding: $navbar-padding-y $navbar-padding-x;
     margin-right: 0;
     background-color: $navbar-brand-bg;
-    background-image: $navbar-brand-logo;
+    //background-image: $navbar-brand-logo;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: $navbar-brand-logo-size;

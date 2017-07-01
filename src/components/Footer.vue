@@ -1,7 +1,6 @@
 <template>
   <footer class="app-footer">
-    <a href="https://genesisui.com">Clever</a> &copy; 2017 creativeLabs.
-    <span class="float-right">Powered by <a href="https://genesisui.com">GenesisUI</a></span>
+    <a href="https://myresolver.co.uk">My Resolver</a> &copy; 2017 online hackathon weekend.
   </footer>
 </template>
 <script>
