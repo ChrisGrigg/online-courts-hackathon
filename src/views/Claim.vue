@@ -61,21 +61,19 @@
           <div class="form-group row">
             <label class="col-md-4 form-control-label">Are there other matters on which you may need to instruct them?</label>
             <div class="col-md-8">
-              <form id="claimantExpertiseForm">
+              <form id="mattersInstructForm">
                 <label class="radio-inline">
-                  <input type="radio" id="claimantExpertiseYes" name="claimantExpertise" value="Yes" checked="checked">Yes
+                  <input type="radio" id="mattersInstructYes" name="mattersInstruct" value="Yes" checked="checked">Yes
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" id="claimantExpertiseNo" name="claimantExpertise" value="No">No
+                  <input type="radio" id="mattersInstructNo" name="mattersInstruct" value="No">No
                 </label>
               </form>
             </div>
           </div>
         </div>
         <div class="card-footer">
-          <router-link :to="'/outcome'" class="nav-link">
-            <button id="submitBtn" class="btn btn-sm btn-primary" type="submit">Next <i class="icon-arrow-right"></i></button>
-          </router-link>
+              <button class="btn btn-sm btn-primary" @click="calculate">Next <i class="icon-arrow-right"></i></button>
         </div>
       </div>
     </div>
@@ -83,7 +81,41 @@
 </template>
 
 <script>
-export default {
-  name: 'claim'
-}
+  import Vue from 'vue'
+  import VueLocalForage from 'vue-localforage'
+  const moment = require('moment')
+  require('moment/locale/en-gb')
+  Vue.use(require('vue-moment'), {
+    moment
+  })
+  Vue.use(VueLocalForage)
+
+  export default {
+    name: 'claim',
+    methods: {
+      calculate (e) {
+        e.preventDefault()
+        let count = 0
+        const list = []
+        list.push(document.querySelector('input[name="prevAdv"]:checked').value)
+        const years = moment().diff(moment(document.getElementById('dateComplaint').value, 'DD-MM-YYYY'), 'years')
+        if (years < 6) {
+          list.push('yes')
+        }
+        list.push(document.querySelector('input[name="apologyGiven"]:checked').value)
+        list.push(document.querySelector('input[name="claimantExpertise"]:checked').value)
+        list.push(document.querySelector('input[name="mattersInstruct"]:checked').value)
+        for (let i = 0; i < list.length; i++) {
+          const obj = list[i]
+          if (obj.toLowerCase() === 'yes') {
+            count++
+          }
+        }
+//        console.log(count)
+        this.$setItem('data', count, () => {
+          this.$router.push('outcome')
+        })
+      }
+    }
+  }
 </script>

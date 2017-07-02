@@ -11,8 +11,21 @@
         <div class="card-header lead"><i class="icon-note"></i> Outcome</div>
         <div class="card-block">
           <p>A number of factors that may affect the outcome of the claim have been considered. Here is a provisioned indication whether the level of risk is low, moderate or high.</p>
+          <h4 id="risk" class="row justify-content-md-center">None</h4>
+          <br />
           <div class="row justify-content-md-center">
-              <img src="static/img/Traffic_light_03.png" alt="Traffic light indicator">
+            <table>
+              <tr id="high" class="d0">
+                <td><b>High</b><br />Risk</td>
+              </tr>
+              <tr id="medium" class="d1">
+                <td><b>Moderate</b><br />Risk</td>
+              </tr>
+              <tr id="low" class="d2">
+                <td><b>Low</b><br />Risk</td>
+              </tr>
+            </table>
+              <!--<img src="static/img/Traffic_light_03.png" alt="Traffic light indicator">-->
           </div>
           <br />
           <p><b>Key Reasons:</b></p>
@@ -36,7 +49,67 @@
 </template>
 
 <script>
-export default {
-  name: 'claim'
-}
+  import Vue from 'vue'
+  import VueLocalForage from 'vue-localforage'
+  Vue.use(VueLocalForage)
+
+  export default {
+    name: 'outcome',
+    methods: {
+      formulate (e) {
+//        e.preventDefault()
+//        let colour
+        this.$getItem('data', (error, data) => {
+          if (error) {
+            console.error(error)
+          }
+          const result = Number(data)
+          console.log(result)
+          console.log('data: ' + data)
+          if (result >= 4) {
+//            document.getElementById('low').style.color = 'blue'
+            document.getElementById('low').style.opacity = 1
+            document.getElementById('risk').innerHTML = 'Low Risk'
+          } else if (result < 4 && result >= 3) {
+//            document.getElementById('medium').style.color = 'blue'
+            document.getElementById('medium').style.opacity = 1
+            document.getElementById('risk').innerHTML = 'Moderate Risk'
+          } else if (result < 3) {
+//            document.getElementById('high').style.color = 'blue'
+            document.getElementById('high').style.opacity = 1
+            document.getElementById('risk').innerHTML = 'High Risk'
+          }
+        })
+      }
+    },
+    mounted: function () {
+      this.formulate()
+    }
+  }
 </script>
+<style lang="css">
+
+  table {
+    width: 50%;
+    text-align: center;
+    color: white;
+  }
+  tr {
+    border: solid #5b686b 2px;
+  }
+  .d0 {
+    background-color: #880000;
+    height: 75px;
+    opacity: 0.5;
+  }
+  .d1 {
+    background-color: #d4431b;
+    height: 150px;
+    opacity: 0.5;
+  }
+  .d2 {
+    background-color: #00a67c;
+    height: 75px;
+    opacity: 0.5;
+  }
+</style>
