@@ -1,6 +1,13 @@
 <template>
   <div>
-    <h3>Consider Your Options</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Consider Your Options</h3>
+      </div>
+      <div class="col-md-6 text-right">
+        <h5>Step 7 of 7</h5>
+      </div>
+    </div>
     <br />
     <h5>Case Number: 566778</h5>
     <br />
