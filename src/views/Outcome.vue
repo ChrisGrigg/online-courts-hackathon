@@ -35,7 +35,6 @@
                 <td><b>Low</b><br />Risk</td>
               </tr>
             </table>
-              <!--<img src="static/img/Traffic_light_03.png" alt="Traffic light indicator">-->
           </div>
           <br />
           <p><b>Key Reasons:</b></p>
@@ -67,8 +66,6 @@
     name: 'outcome',
     methods: {
       formulate (e) {
-//        e.preventDefault()
-//        let colour
         this.$getItem('data', (error, data) => {
           if (error) {
             console.error(error)
