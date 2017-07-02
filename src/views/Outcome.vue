@@ -76,20 +76,17 @@
           if (result >= 4) {
             document.getElementById('d2Arrow').style.opacity = '1'
             document.getElementById('low').style.border = 'solid red 5px'
-            document.getElementById('low').style.fontSize = '18px'
             document.getElementById('low').style.textDecoration = 'underline'
             document.getElementById('risk').innerHTML = 'Low Risk'
           } else if (result < 4 && result >= 3) {
             document.getElementById('d1Arrow').style.opacity = '1'
             document.getElementById('medium').style.border = 'solid red 5px'
-            document.getElementById('medium').style.fontSize = '18px'
             document.getElementById('medium').style.textDecoration = 'underline'
             document.getElementById('risk').innerHTML = 'Moderate Risk'
           } else if (result < 3) {
             document.getElementById('d0Arrow').style.opacity = '1'
             document.getElementById('high').style.border = 'solid red 5px'
             document.getElementById('high').style.textDecoration = 'underline'
-            document.getElementById('high').style.fontSize = '18px'
             document.getElementById('risk').innerHTML = 'High Risk'
           }
         })
@@ -106,6 +103,7 @@
     width: 50%;
     text-align: center;
     color: white;
+    font-size: 18px;
   }
   #risk {
     text-decoration: underline;
@@ -132,7 +130,7 @@
     opacity: 0;
   }
   #d0Arrow td:before {
-    right: 75%;
+    right: 72%;
     top: 32%;
     border: solid transparent;
     content: " ";
@@ -140,12 +138,12 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: #880000;
+    border-left-color: #880000;
     border-width: 36px;
     margin-top: -36px;
   }
   #d1Arrow td:before {
-    right: 75%;
+    right: 72%;
     top: 49%;
     border: solid transparent;
     content: " ";
@@ -153,12 +151,12 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: orange;
+    border-left-color: orange;
     border-width: 36px;
     margin-top: -36px;
   }
   #d2Arrow td:before {
-    right: 75%;
+    right: 72%;
     top: 65%;
     border: solid transparent;
     content: " ";
@@ -166,7 +164,7 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: #00a67c;
+    border-left-color: #00a67c;
     border-width: 36px;
     margin-top: -36px;
   }
