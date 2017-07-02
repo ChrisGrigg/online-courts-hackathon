@@ -67,15 +67,15 @@
           console.log(result)
           console.log('data: ' + data)
           if (result >= 4) {
-            document.getElementById('low').style.border = 'solid red 2px'
+            document.getElementById('low').style.border = 'solid red 3px'
             document.getElementById('low').style.opacity = 1
             document.getElementById('risk').innerHTML = 'Low Risk'
           } else if (result < 4 && result >= 3) {
-            document.getElementById('medium').style.border = 'solid red 2px'
+            document.getElementById('medium').style.border = 'solid red 3px'
             document.getElementById('medium').style.opacity = 1
             document.getElementById('risk').innerHTML = 'Moderate Risk'
           } else if (result < 3) {
-            document.getElementById('high').style.border = 'solid red 2px'
+            document.getElementById('high').style.border = 'solid red 3px'
             document.getElementById('high').style.opacity = 1
             document.getElementById('risk').innerHTML = 'High Risk'
           }
@@ -94,8 +94,8 @@
     text-align: center;
     color: white;
   }
-  tr {
-    /*border: solid #5b686b 2px;*/
+  #risk {
+    text-decoration: underline;
   }
   .d0 {
     background-color: #880000;
