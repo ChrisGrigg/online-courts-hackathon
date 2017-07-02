@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-md-4 form-control-label">Did you feel the Solicitor was slow in responding to correspondence?</label>
+            <label class="col-md-4 form-control-label red">Did you feel the Solicitor was slow in responding to correspondence?</label>
             <div class="col-md-8">
               <form id="claimantExpertiseForm">
                 <label class="radio-inline">
@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-md-4 form-control-label">Are there other matters on which you may need to instruct them?</label>
+            <label class="col-md-4 form-control-label blue">Are there other matters on which you may need to instruct them?</label>
             <div class="col-md-8">
               <form id="mattersInstructForm">
                 <label class="radio-inline">
@@ -119,3 +119,11 @@
     }
   }
 </script>
+<style lang="css">
+  .red {
+    color: #880000;
+  }
+  .blue {
+    color: #00aced;
+  }
+</style>
