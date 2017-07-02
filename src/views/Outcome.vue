@@ -115,7 +115,7 @@
     height: 75px;
   }
   .d1 {
-    background-color: #d4431b;
+    background-color: orange;
     height: 150px;
   }
   .d2 {
@@ -153,7 +153,7 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: #d4431b;
+    border-right-color: orange;
     border-width: 36px;
     margin-top: -36px;
   }
