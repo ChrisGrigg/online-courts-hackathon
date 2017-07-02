@@ -10,17 +10,17 @@
       <div class="card">
         <div class="card-header lead"><i class="icon-note"></i> Options</div>
         <div class="card-block">
-          <h3><i class="fa fa-arrow-right mr-1"></i> <u>Proceed</u> <i class="fa fa-info-circle ml-1"></i></h3>
-          <h5 class="ml-3">with claim</h5>
+          <h5><i class="fa fa-arrow-right mr-1"></i> <u>Proceed</u> <i class="fa fa-info-circle ml-1"></i></h5>
+          <h6 class="ml-3">with claim</h6>
           <br />
-          <h3><i class="fa fa-arrow-right mr-1"></i> <u>Negotiate</u> <i class="fa fa-info-circle ml-1"></i></h3>
-          <h5 class="ml-3">direct with Defendant</h5>
+          <h5><i class="fa fa-arrow-right mr-1"></i> <u>Negotiate</u> <i class="fa fa-info-circle ml-1"></i></h5>
+          <h6 class="ml-3">direct with Defendant</h6>
           <br />
-          <h3><i class="fa fa-arrow-right mr-1"></i> <u>Blind Bidding</u> <i class="fa fa-info-circle ml-1"></i></h3>
-          <h5 class="ml-3">enter the blind bidding process</h5>
+          <h5><i class="fa fa-arrow-right mr-1"></i> <u>Blind Bidding</u> <i class="fa fa-info-circle ml-1"></i></h5>
+          <h6 class="ml-3">enter the blind bidding process</h6>
           <br />
-          <h3><i class="fa fa-arrow-right mr-1"></i> <u>Other Settlement Options</u> <i class="fa fa-info-circle ml-1"></i></h3>
-          <h5 class="ml-3">e.g. mediation, un-bundled legal advice</h5>
+          <h5><i class="fa fa-arrow-right mr-1"></i> <u>Other Settlement Options</u> <i class="fa fa-info-circle ml-1"></i></h5>
+          <h6 class="ml-3">e.g. mediation, un-bundled legal advice</h6>
         </div>
         <div class="card-footer">
           <router-link :to="'/outcome'" class="nav-link d-inline">
