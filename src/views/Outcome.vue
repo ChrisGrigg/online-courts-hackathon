@@ -74,16 +74,19 @@
           console.log(result)
           console.log('data: ' + data)
           if (result >= 4) {
-            document.getElementById('low').style.border = 'solid red 3px'
-            document.getElementById('low').style.opacity = 1
+            document.getElementById('low').style.border = 'solid red 5px'
+            document.getElementById('low').style.fontSize = '18px'
+            document.getElementById('low').style.textDecoration = 'underline'
             document.getElementById('risk').innerHTML = 'Low Risk'
           } else if (result < 4 && result >= 3) {
-            document.getElementById('medium').style.border = 'solid red 3px'
-            document.getElementById('medium').style.opacity = 1
+            document.getElementById('medium').style.border = 'solid red 5px'
+            document.getElementById('medium').style.fontSize = '18px'
+            document.getElementById('medium').style.textDecoration = 'underline'
             document.getElementById('risk').innerHTML = 'Moderate Risk'
           } else if (result < 3) {
-            document.getElementById('high').style.border = 'solid red 3px'
-            document.getElementById('high').style.opacity = 1
+            document.getElementById('high').style.border = 'solid red 5px'
+            document.getElementById('high').style.textDecoration = 'underline'
+            document.getElementById('high').style.fontSize = '18px'
             document.getElementById('risk').innerHTML = 'High Risk'
           }
         })
@@ -107,16 +110,13 @@
   .d0 {
     background-color: #880000;
     height: 75px;
-    opacity: 0.5;
   }
   .d1 {
     background-color: #d4431b;
     height: 150px;
-    opacity: 0.5;
   }
   .d2 {
     background-color: #00a67c;
     height: 75px;
-    opacity: 0.5;
   }
 </style>
