@@ -22,12 +22,15 @@
           <br />
           <div class="row justify-content-md-center">
             <table>
+              <tr id="d0Arrow"><td></td></tr>
               <tr id="high" class="d0">
                 <td><b>High</b><br />Risk</td>
               </tr>
+              <tr id="d1Arrow"><td></td></tr>
               <tr id="medium" class="d1">
                 <td><b>Moderate</b><br />Risk</td>
               </tr>
+              <tr id="d2Arrow"><td></td></tr>
               <tr id="low" class="d2">
                 <td><b>Low</b><br />Risk</td>
               </tr>
@@ -74,16 +77,19 @@
           console.log(result)
           console.log('data: ' + data)
           if (result >= 4) {
+            document.getElementById('d2Arrow').style.opacity = '1'
             document.getElementById('low').style.border = 'solid red 5px'
             document.getElementById('low').style.fontSize = '18px'
             document.getElementById('low').style.textDecoration = 'underline'
             document.getElementById('risk').innerHTML = 'Low Risk'
           } else if (result < 4 && result >= 3) {
+            document.getElementById('d1Arrow').style.opacity = '1'
             document.getElementById('medium').style.border = 'solid red 5px'
             document.getElementById('medium').style.fontSize = '18px'
             document.getElementById('medium').style.textDecoration = 'underline'
             document.getElementById('risk').innerHTML = 'Moderate Risk'
           } else if (result < 3) {
+            document.getElementById('d0Arrow').style.opacity = '1'
             document.getElementById('high').style.border = 'solid red 5px'
             document.getElementById('high').style.textDecoration = 'underline'
             document.getElementById('high').style.fontSize = '18px'
@@ -118,5 +124,53 @@
   .d2 {
     background-color: #00a67c;
     height: 75px;
+  }
+  #d0Arrow {
+    opacity: 0;
+  }
+  #d1Arrow {
+    opacity: 0;
+  }
+  #d2Arrow {
+    opacity: 0;
+  }
+  #d0Arrow td:before {
+    right: 75%;
+    top: 32%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #880000;
+    border-width: 36px;
+    margin-top: -36px;
+  }
+  #d1Arrow td:before {
+    right: 75%;
+    top: 49%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #d4431b;
+    border-width: 36px;
+    margin-top: -36px;
+  }
+  #d2Arrow td:before {
+    right: 75%;
+    top: 65%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #00a67c;
+    border-width: 36px;
+    margin-top: -36px;
   }
 </style>
